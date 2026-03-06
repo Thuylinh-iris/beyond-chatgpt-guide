@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Slide 4 - The Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            padding: 20px;
+        }
+        
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: #1a1a2e;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px;
+            position: relative;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        h2 {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            padding: 48px;
+            border-radius: 16px;
+            text-align: center;
+        }
+        
+        .stat-icon {
+            font-size: 56px;
+            margin-bottom: 24px;
+        }
+        
+        .stat-number {
+            font-size: 72px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+        
+        .stat-label {
+            font-size: 24px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .branding {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .handle {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-number">4/7</div>
+        <h2>The Results</h2>
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-icon">⏱️</div>
+                <div class="stat-number">364</div>
+                <div class="stat-label">Hours saved per year</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚙️</div>
+                <div class="stat-number">5</div>
+                <div class="stat-label">Autonomous workflows</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🤖</div>
+                <div class="stat-number">1</div>
+                <div class="stat-label">Setup (hours)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-number">$0</div>
+                <div class="stat-label">Ongoing cost</div>
+            </div>
+        </div>
+        <div class="branding">Your First AI Employee</div>
+        <div class="handle">@AskFizz</div>
+    </div>
+</body>
+</html>

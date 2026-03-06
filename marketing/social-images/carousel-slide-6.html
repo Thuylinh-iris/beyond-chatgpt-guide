@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Slide 6 - Who This Is For</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            padding: 20px;
+        }
+        
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: #1a1a2e;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+            position: relative;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        h2 {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 48px;
+        }
+        
+        .personas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            flex: 1;
+        }
+        
+        .persona {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .persona-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+        }
+        
+        .persona-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+        
+        .persona-desc {
+            font-size: 18px;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.5;
+        }
+        
+        .branding {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .handle {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-number">6/7</div>
+        <h2>This Is For You If...</h2>
+        <div class="personas">
+            <div class="persona">
+                <div class="persona-icon">😤</div>
+                <div class="persona-title">You're tired</div>
+                <div class="persona-desc">Of AI that just talks and doesn't DO anything</div>
+            </div>
+            <div class="persona">
+                <div class="persona-icon">🎯</div>
+                <div class="persona-title">You want results</div>
+                <div class="persona-desc">Not suggestions, not answers — actual outcomes</div>
+            </div>
+            <div class="persona">
+                <div class="persona-icon">🔄</div>
+                <div class="persona-title">You're ready</div>
+                <div class="persona-desc">To shift how you think about AI completely</div>
+            </div>
+            <div class="persona">
+                <div class="persona-icon">💤</div>
+                <div class="persona-title">You want freedom</div>
+                <div class="persona-desc">AI that works while you sleep</div>
+            </div>
+        </div>
+        <div class="branding">Your First AI Employee</div>
+        <div class="handle">@AskFizz</div>
+    </div>
+</body>
+</html>

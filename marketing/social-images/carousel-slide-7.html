@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Slide 7 - CTA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            padding: 20px;
+        }
+        
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .slide::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .content {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background: white;
+            color: #764ba2;
+            padding: 16px 40px;
+            border-radius: 60px;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        
+        .tagline {
+            font-size: 32px;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 48px;
+        }
+        
+        .guarantee {
+            background: rgba(255,255,255,0.2);
+            padding: 24px 40px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+        
+        .guarantee-text {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .guarantee-sub {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-top: 8px;
+        }
+        
+        .branding {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .handle {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-number">7/7</div>
+        <div class="content">
+            <div class="price-tag">$14.99</div>
+            <h1>Your First AI Employee</h1>
+            <p class="tagline">Stop chatting with AI. Start partnering with it.</p>
+            <div class="guarantee">
+                <div class="guarantee-text">✓ 30-Day Money-Back Guarantee</div>
+                <div class="guarantee-sub">Save 7+ hours or get a full refund</div>
+            </div>
+        </div>
+        <div class="branding">Link in bio</div>
+        <div class="handle">@AskFizz</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel Slide 5 - What's Inside</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a1a1a;
+            padding: 20px;
+        }
+        
+        .slide {
+            width: 1080px;
+            height: 1080px;
+            background: #1a1a2e;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+            position: relative;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        h2 {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 48px;
+        }
+        
+        .chapters {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            flex: 1;
+        }
+        
+        .chapter {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            background: rgba(255,255,255,0.05);
+            padding: 28px 32px;
+            border-radius: 12px;
+        }
+        
+        .chapter-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .chapter-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .branding {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .handle {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 16px;
+            color: rgba(255,255,255,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="slide-number">5/7</div>
+        <h2>What's Inside</h2>
+        <div class="chapters">
+            <div class="chapter">
+                <div class="chapter-number">1</div>
+                <div class="chapter-title">Why OpenClaw Is Different</div>
+            </div>
+            <div class="chapter">
+                <div class="chapter-number">2</div>
+                <div class="chapter-title">Your First AI Employee (Setup)</div>
+            </div>
+            <div class="chapter">
+                <div class="chapter-number">3</div>
+                <div class="chapter-title">5 Real Workflows</div>
+            </div>
+            <div class="chapter">
+                <div class="chapter-number">4</div>
+                <div class="chapter-title">Common Mistakes</div>
+            </div>
+            <div class="chapter">
+                <div class="chapter-number">5</div>
+                <div class="chapter-title">Pushing Further (Income Generation)</div>
+            </div>
+        </div>
+        <div class="branding">Your First AI Employee</div>
+        <div class="handle">@AskFizz</div>
+    </div>
+</body>
+</html>

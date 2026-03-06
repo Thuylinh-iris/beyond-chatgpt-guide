@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Mockup - Your First AI Employee</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+        }
+        
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+        
+        .book {
+            width: 320px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .book::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .book-header {
+            padding: 40px 30px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        
+        .book-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+        
+        .book-subtitle {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .book-content {
+            padding: 30px;
+        }
+        
+        .toc {
+            list-style: none;
+        }
+        
+        .toc-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+            color: #444;
+        }
+        
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+        
+        .toc-icon {
+            width: 32px;
+            height: 32px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+        
+        .book-footer {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price {
+            font-size: 24px;
+            font-weight: 800;
+            color: #1a1a1a;
+        }
+        
+        .pages {
+            font-size: 13px;
+            color: #888;
+        }
+        
+        .info {
+            color: white;
+            max-width: 400px;
+        }
+        
+        .info h2 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+        
+        .info p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+            margin-bottom: 32px;
+        }
+        
+        .features-list {
+            list-style: none;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            font-size: 16px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            margin-right: 12px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="book">
+            <div class="book-header">
+                <div class="badge">Digital Guide</div>
+                <h1 class="book-title">Your First AI Employee</h1>
+                <p class="book-subtitle">Make OpenClaw work while you sleep</p>
+            </div>
+            <div class="book-content">
+                <ul class="toc">
+                    <li class="toc-item">
+                        <span class="toc-icon">🧠</span>
+                        Why OpenClaw Is Different
+                    </li>
+                    <li class="toc-item">
+                        <span class="toc-icon">🤖</span>
+                        Setting Up Your AI Employee
+                    </li>
+                    <li class="toc-item">
+                        <span class="toc-icon">⚙️</span>
+                        5 Real Workflows
+                    </li>
+                    <li class="toc-item">
+                        <span class="toc-icon">⚠️</span>
+                        Common Mistakes
+                    </li>
+                    <li class="toc-item">
+                        <span class="toc-icon">🚀</span>
+                        Pushing Further
+                    </li>
+                </ul>
+            </div>
+            <div class="book-footer">
+                <div class="price">$14.99</div>
+                <div class="pages">24 Pages • PDF</div>
+            </div>
+        </div>
+        <div class="info">
+            <h2>Stop chatting with AI.<br>Start partnering with it.</h2>
+            <p>A practical guide on the mindset shift from "AI I chat with" to "AI I delegate to."</p>
+            <ul class="features-list">
+                <li>The mindset shift framework</li>
+                <li>5 ready-to-use workflows</li>
+                <li>Save 7+ hours weekly</li>
+                <li>30-day money-back guarantee</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
