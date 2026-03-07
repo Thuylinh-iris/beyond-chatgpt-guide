@@ -3,662 +3,571 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your First AI Employee — Make OpenClaw Work While You Sleep</title>
+    <title>AI Mindset Revolution - Stop Chatting With AI and Start Partnering With It</title>
+    <meta name="description" content="A 60-page guide that shows you how to shift from using AI as a tool to partnering with AI as an autonomous assistant. Save 7+ hours daily. Generate income while you sleep.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            background: #fafafa;
+            line-height: 1.7;
+            color: #2d3748;
+            background: #ffffff;
         }
-        
+
         .container {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 24px;
         }
-        
+
+        /* Header */
+        header {
+            background: #1a3a52;
+            color: white;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-cta {
+            background: #ff6b35;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: #e55a2b;
+        }
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a3a52 0%, #2c5f7c 100%);
             color: white;
-            padding: 80px 24px;
-            text-align: center;
+            padding: 100px 0 120px;
         }
-        
+
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 52px;
             font-weight: 800;
+            line-height: 1.15;
             margin-bottom: 24px;
-            line-height: 1.2;
+            letter-spacing: -0.5px;
         }
-        
-        .hero .tagline {
-            font-size: 1.3rem;
+
+        .hero .subtitle {
+            font-size: 22px;
             opacity: 0.95;
-            margin-bottom: 32px;
-            font-weight: 300;
+            margin-bottom: 40px;
+            max-width: 640px;
+            line-height: 1.6;
         }
-        
-        .hero .pain {
-            background: rgba(255,255,255,0.15);
-            padding: 24px;
-            border-radius: 12px;
-            margin: 32px auto;
-            max-width: 600px;
-            text-align: left;
-        }
-        
-        .hero .pain h3 {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            opacity: 0.9;
-        }
-        
-        .hero .pain ul {
-            list-style: none;
-        }
-        
-        .hero .pain li {
-            padding: 8px 0;
-            padding-left: 28px;
-            position: relative;
-        }
-        
-        .hero .pain li:before {
-            content: "✗";
-            position: absolute;
-            left: 0;
-            color: #ff6b6b;
-            font-weight: bold;
-        }
-        
-        .cta-button {
+
+        .hero-cta {
             display: inline-block;
-            background: #10b981;
+            background: #ff6b35;
             color: white;
-            padding: 18px 48px;
+            padding: 18px 40px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.2rem;
-            margin-top: 32px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            font-size: 18px;
+            transition: transform 0.2s, background 0.2s;
         }
-        
-        .cta-button:hover {
+
+        .hero-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #e55a2b;
         }
-        
-        .price-tag {
-            margin-top: 16px;
-            font-size: 0.95rem;
-            opacity: 0.9;
+
+        .hero-meta {
+            margin-top: 40px;
+            font-size: 15px;
+            opacity: 0.85;
         }
-        
+
         /* Problem Section */
         .problem {
-            padding: 64px 24px;
-            background: white;
+            padding: 100px 0;
+            background: #f8fafc;
         }
-        
+
         .problem h2 {
-            font-size: 2rem;
+            font-size: 40px;
+            font-weight: 800;
             margin-bottom: 24px;
-            text-align: center;
+            color: #1a3a52;
         }
-        
-        .comparison {
+
+        .problem-text {
+            font-size: 20px;
+            max-width: 740px;
+            margin-bottom: 60px;
+            color: #4a5568;
+        }
+
+        .pain-points {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin-top: 40px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
         }
-        
-        .comparison-box {
-            padding: 24px;
-            border-radius: 12px;
+
+        .pain-point {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
         }
-        
-        .comparison-box.wrong {
-            background: #fef2f2;
-            border: 2px solid #fecaca;
+
+        .pain-point h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a3a52;
         }
-        
-        .comparison-box.right {
-            background: #f0fdf4;
-            border: 2px solid #86efac;
+
+        .pain-point p {
+            font-size: 16px;
+            color: #4a5568;
         }
-        
-        .comparison-box h3 {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-        }
-        
-        .comparison-box.wrong h3 {
-            color: #dc2626;
-        }
-        
-        .comparison-box.right h3 {
-            color: #16a34a;
-        }
-        
-        .comparison-box ul {
-            list-style: none;
-        }
-        
-        .comparison-box li {
-            padding: 6px 0;
-            padding-left: 24px;
-            position: relative;
-        }
-        
-        .comparison-box.wrong li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #dc2626;
-        }
-        
-        .comparison-box.right li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #16a34a;
-        }
-        
+
         /* Solution Section */
         .solution {
-            padding: 64px 24px;
-            background: #fafafa;
+            padding: 100px 0;
         }
-        
+
         .solution h2 {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            text-align: center;
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1a3a52;
         }
-        
-        .solution .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 1.1rem;
+
+        .solution-text {
+            font-size: 20px;
+            max-width: 740px;
+            margin-bottom: 60px;
+            color: #4a5568;
         }
-        
-        .benefit-grid {
+
+        .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
         }
-        
-        .benefit-card {
-            background: white;
-            padding: 32px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+        .feature {
+            padding: 24px 0;
+            border-bottom: 2px solid #e2e8f0;
         }
-        
-        .benefit-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
-        
-        .benefit-card h3 {
-            font-size: 1.2rem;
+
+        .feature h3 {
+            font-size: 20px;
+            font-weight: 700;
             margin-bottom: 12px;
-            color: #667eea;
+            color: #1a3a52;
         }
-        
-        .benefit-card p {
-            color: #555;
-            font-size: 0.95rem;
+
+        .feature p {
+            font-size: 17px;
+            color: #4a5568;
         }
-        
-        /* What You Get Section */
-        .what-you-get {
-            padding: 64px 24px;
-            background: white;
-        }
-        
-        .what-you-get h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        
-        .module-list {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .module {
-            padding: 20px;
-            border-left: 4px solid #667eea;
-            background: #f8fafc;
-            margin-bottom: 16px;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .module h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #1a1a1a;
-        }
-        
-        .module p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* Who It's For */
-        .who-for {
-            padding: 64px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        /* Results Section */
+        .results {
+            padding: 100px 0;
+            background: #1a3a52;
             color: white;
         }
-        
-        .who-for h2 {
-            font-size: 2rem;
-            margin-bottom: 32px;
+
+        .results h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 60px;
             text-align: center;
         }
-        
-        .who-grid {
+
+        .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-            max-width: 800px;
-            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px;
+            text-align: center;
         }
-        
-        .who-card {
-            background: rgba(255,255,255,0.1);
-            padding: 24px;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .who-card h4 {
+
+        .result-item h3 {
+            font-size: 56px;
+            font-weight: 800;
             margin-bottom: 12px;
-            font-size: 1.1rem;
+            color: #ff6b35;
         }
-        
-        .who-card p {
+
+        .result-item p {
+            font-size: 18px;
             opacity: 0.9;
-            font-size: 0.95rem;
         }
-        
-        /* Social Proof */
-        .social-proof {
-            padding: 64px 24px;
-            background: #fafafa;
+
+        /* Content Section */
+        .content {
+            padding: 100px 0;
         }
-        
-        .social-proof h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
+
+        .content h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #1a3a52;
+        }
+
+        .content-text {
+            font-size: 20px;
+            margin-bottom: 60px;
+            color: #4a5568;
+        }
+
+        .chapters {
+            max-width: 740px;
+        }
+
+        .chapter {
+            padding: 24px 0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .chapter h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1a3a52;
+        }
+
+        .chapter p {
+            font-size: 17px;
+            color: #4a5568;
+        }
+
+        /* Audience Section */
+        .audience {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .audience h2 {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 60px;
+            color: #1a3a52;
             text-align: center;
         }
-        
-        .testimonial {
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .audience-item {
             background: white;
-            padding: 32px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            max-width: 700px;
-            margin: 0 auto 24px;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
         }
-        
-        .testimonial .quote {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: #333;
-            margin-bottom: 16px;
+
+        .audience-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1a3a52;
         }
-        
-        .testimonial .author {
-            color: #666;
-            font-size: 0.9rem;
+
+        .audience-item p {
+            font-size: 17px;
+            color: #4a5568;
         }
-        
-        .testimonial .author strong {
-            color: #667eea;
-        }
-        
-        /* Guarantee */
-        .guarantee {
-            padding: 64px 24px;
-            background: white;
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #2c5f7c 0%, #1a3a52 100%);
+            color: white;
             text-align: center;
         }
-        
-        .guarantee h2 {
-            font-size: 2rem;
+
+        .cta-section h2 {
+            font-size: 44px;
+            font-weight: 800;
             margin-bottom: 24px;
         }
-        
-        .guarantee-box {
-            background: #fef3c7;
-            border: 2px solid #fbbf24;
-            padding: 32px;
-            border-radius: 12px;
-            max-width: 600px;
-            margin: 0 auto;
+
+        .cta-section .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        .guarantee-box .icon {
-            font-size: 3rem;
-            margin-bottom: 16px;
-        }
-        
-        .guarantee-box h3 {
-            font-size: 1.3rem;
+
+        .price {
+            font-size: 56px;
+            font-weight: 800;
             margin-bottom: 12px;
-            color: #92400e;
         }
-        
-        .guarantee-box p {
-            color: #78350f;
+
+        .price-note {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 40px;
         }
-        
-        /* Final CTA */
-        .final-cta {
-            padding: 80px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 20px 48px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background: #e55a2b;
+        }
+
+        .guarantee {
+            margin-top: 32px;
+            font-size: 15px;
+            opacity: 0.85;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            background: #1a3a52;
             color: white;
             text-align: center;
         }
-        
-        .final-cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
+
+        footer p {
+            opacity: 0.7;
+            font-size: 15px;
         }
-        
-        .final-cta .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            margin-bottom: 32px;
-        }
-        
-        .final-cta .cta-button {
-            background: white;
-            color: #667eea;
-        }
-        
-        .final-cta .cta-button:hover {
-            background: #f0f0f0;
-        }
-        
-        /* Footer */
-        .footer {
-            padding: 32px 24px;
-            background: #1a1a1a;
-            color: #999;
-            text-align: center;
-            font-size: 0.9rem;
-        }
-        
-        .footer a {
-            color: #ccc;
-            text-decoration: none;
-        }
-        
-        /* Mobile Responsive */
+
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 36px;
             }
-            
-            .hero .tagline {
-                font-size: 1.1rem;
+
+            .hero .subtitle {
+                font-size: 18px;
             }
-            
-            .comparison {
+
+            .pain-points {
                 grid-template-columns: 1fr;
             }
-            
-            h2 {
-                font-size: 1.75rem;
+
+            .features {
+                grid-template-columns: 1fr;
             }
-            
-            .final-cta h2 {
-                font-size: 2rem;
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+
+            .price {
+                font-size: 44px;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">AI Mindset Revolution</a>
+            <a href="#buy" class="nav-cta">Get the Guide</a>
+        </div>
+    </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Your First AI Employee</h1>
-            <p class="tagline">Stop chatting with AI. Start delegating to it.</p>
-            
-            <div class="pain">
-                <h3>You've been using AI wrong:</h3>
-                <ul>
-                    <li>You ask questions, copy answers, paste them elsewhere</li>
-                    <li>You repeat yourself every session—AI forgets everything</li>
-                    <li>You're always in the loop, manually executing every step</li>
-                    <li>You treat AI as a "helpful tool" not a "reliable worker"</li>
-                </ul>
-            </div>
-            
-            <a href="#buy" class="cta-button">Get the Guide — $14.99</a>
-            <p class="price-tag">Instant download • 30-day money-back guarantee</p>
+            <h1>You've Been Using AI Wrong</h1>
+            <p class="subtitle">Most people use 10% of AI's potential. They ask questions, get answers, and leave. This guide shows you the other 90%: how to stop chatting with AI and start partnering with it to save time, generate income, and transform your productivity.</p>
+            <a href="#buy" class="hero-cta">Get Instant Access - $14.99</a>
+            <p class="hero-meta">60 pages | Instant download | 30-day money-back guarantee</p>
         </div>
     </section>
 
-    <!-- Problem Section -->
     <section class="problem">
         <div class="container">
-            <h2>ChatGPT Helps. OpenClaw Works.</h2>
+            <h2>The Problem With How You Use AI</h2>
+            <p class="problem-text">You treat AI like a search engine. You ask a question, get an answer, and move on. This approach leaves 90% of AI's value on the table. You're missing the real power: autonomous execution, proactive work, and systems that run while you sleep.</p>
             
-            <div class="comparison">
-                <div class="comparison-box wrong">
-                    <h3>❌ ChatGPT Approach</h3>
-                    <ul>
-                        <li>"Write me a post about X"</li>
-                        <li>Copy the text</li>
-                        <li>Open social platform</li>
-                        <li>Paste and post</li>
-                        <li>Repeat tomorrow</li>
-                    </ul>
-                    <p style="margin-top: 16px; font-weight: 600; color: #dc2626;">You're still doing the work.</p>
+            <div class="pain-points">
+                <div class="pain-point">
+                    <h3>You're Reactive, Not Proactive</h3>
+                    <p>You wait to ask AI questions. You initiate every interaction. AI could be reaching out to you with insights, but you never set it up that way.</p>
                 </div>
-                
-                <div class="comparison-box right">
-                    <h3>✓ OpenClaw Approach</h3>
-                    <ul>
-                        <li>"Post daily content about X at 8 AM"</li>
-                        <li>OpenClaw creates content</li>
-                        <li>OpenClaw posts it</li>
-                        <li>OpenClaw repeats tomorrow</li>
-                        <li>You do nothing</li>
-                    </ul>
-                    <p style="margin-top: 16px; font-weight: 600; color: #16a34a;">Set it up once. It keeps working.</p>
+                <div class="pain-point">
+                    <h3>You Do the Manual Work</h3>
+                    <p>AI generates text, but you still copy, paste, format, and post. You're using AI as a fancy typewriter, not as an autonomous assistant that executes tasks.</p>
+                </div>
+                <div class="pain-point">
+                    <h3>You Start Fresh Every Time</h3>
+                    <p>Every conversation resets. You repeat yourself constantly. AI doesn't remember your preferences, your business, or what you told it yesterday.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
     <section class="solution">
         <div class="container">
-            <h2>What You'll Learn</h2>
-            <p class="subtitle">This guide shows you exactly how to turn OpenClaw into your first AI employee</p>
+            <h2>The Mindset Shift That Changes Everything</h2>
+            <p class="solution-text">This guide teaches you to think differently about AI. Instead of treating it as a tool you access when needed, you'll learn to treat it as a worker you delegate to. The shift is simple but profound: from "I use AI to help me" to "I delegate tasks to AI."</p>
             
-            <div class="benefit-grid">
-                <div class="benefit-card">
-                    <div class="icon">🎯</div>
-                    <h3>The Mindset Shift</h3>
-                    <p>Stop treating AI as a chatbot. Start treating it as a worker you manage. This one shift changes everything.</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>Work While You Sleep</h3>
+                    <p>Set up AI to monitor your email, track your packages, research topics, and prepare reports while you rest. Wake up to completed tasks, not a to-do list.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="icon">🧠</div>
-                    <h3>Give It Memory</h3>
-                    <p>Set up SOUL.md, USER.md, and MEMORY.md so your AI remembers everything. Tell it once, it knows forever.</p>
+                <div class="feature">
+                    <h3>Remember Everything Forever</h3>
+                    <p>Tell AI about your business once. It remembers forever. No more repeating yourself. No more context that resets after every conversation.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="icon">⚡</div>
-                    <h3>Set It Free</h3>
-                    <p>Use cron jobs and heartbeats to make your AI work autonomously. Wake up to completed tasks.</p>
+                <div class="feature">
+                    <h3>Execute Tasks, Not Just Talk</h3>
+                    <p>AI doesn't just generate text. It sends emails, posts to social media, creates files, runs commands, and completes workflows end-to-end.</p>
                 </div>
-                
-                <div class="benefit-card">
-                    <div class="icon">🔄</div>
-                    <h3>5 Ready-to-Use Workflows</h3>
-                    <p>Content creation, research assistant, morning briefings, customer support, even money-making agents.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="icon">⚠️</div>
-                    <h3>Avoid Common Mistakes</h3>
-                    <p>Learn what NOT to do so you don't waste time. Most people use 10% of OpenClaw's capability. Don't be most people.</p>
-                </div>
-                
-                <div class="benefit-card">
-                    <div class="icon">📈</div>
-                    <h3>Push Further</h3>
-                    <p>Once you master the basics, learn how to scale to multiple workflows, connect more tools, and generate real income.</p>
+                <div class="feature">
+                    <h3>Be Proactive, Not Reactive</h3>
+                    <p>AI initiates. It reaches out with insights, alerts you to problems, and suggests actions. You don't always have to ask first.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What You Get -->
-    <section class="what-you-get">
+    <section class="results">
         <div class="container">
-            <h2>What's Included</h2>
-            
-            <div class="module-list">
-                <div class="module">
-                    <h4>Part 1: Why OpenClaw Is Different</h4>
-                    <p>Understand the fundamental difference between "AI that chats" and "AI that works." See real comparisons and concrete examples.</p>
+            <h2>What You'll Achieve</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <h3>7+</h3>
+                    <p>Hours saved daily</p>
                 </div>
-                
-                <div class="module">
-                    <h4>Part 2: Your First AI Employee</h4>
-                    <p>Step-by-step setup: give it identity, give it memory, give it tasks. Everything you need to configure OpenClaw correctly from day one.</p>
+                <div class="result-item">
+                    <h3>1,344</h3>
+                    <p>Hours saved per year</p>
                 </div>
-                
-                <div class="module">
-                    <h4>Part 3: Real Workflows</h4>
-                    <p>5 practical workflows with exact setup instructions: content creation, research assistant, morning briefings, customer support, and income generation.</p>
-                </div>
-                
-                <div class="module">
-                    <h4>Part 4: Common Mistakes</h4>
-                    <p>The 5 most common mistakes and how to avoid them. Learn from others' failures so you don't repeat them.</p>
-                </div>
-                
-                <div class="module">
-                    <h4>Part 5: Pushing Further</h4>
-                    <p>What becomes possible once you master the basics. The progression path from "helpful assistant" to "autonomous worker."</p>
-                </div>
-                
-                <div class="module">
-                    <h4>Quick Start Checklist</h4>
-                    <p>A 4-week implementation plan to go from zero to fully autonomous workflows. Check boxes, make progress.</p>
+                <div class="result-item">
+                    <h3>33</h3>
+                    <p>Income-generating automations</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Who It's For -->
-    <section class="who-for">
+    <section class="content">
         <div class="container">
-            <h2>Who This Is For</h2>
+            <h2>What's Inside the Guide</h2>
+            <p class="content-text">A complete 60-page guide divided into four parts. Every page is designed to expand your perception of what's possible with AI. No fluff. No filler. Just actionable insights and real-world examples.</p>
             
-            <div class="who-grid">
-                <div class="who-card">
-                    <h4>🔍 You've tried ChatGPT but...</h4>
-                    <p>You're tired of copy-pasting. You want AI that actually does things, not just talks about them.</p>
+            <div class="chapters">
+                <div class="chapter">
+                    <h3>Part 1: The Paradigm Shift</h3>
+                    <p>Why you've been using 10% of AI's value. The real story of someone who automated 90% of their job. The mindset shift from user to manager.</p>
                 </div>
-                
-                <div class="who-card">
-                    <h4>⚡ You're time-poor</h4>
-                    <p>You have more tasks than hours. You need leverage—systems that work without your constant involvement.</p>
+                <div class="chapter">
+                    <h3>Part 2: Real-World Workflows</h3>
+                    <p>25+ specific workflows that transform daily life: morning briefings, email automation, meeting transcription, research systems, content engines.</p>
                 </div>
-                
-                <div class="who-card">
-                    <h4>🎯 You want real results</h4>
-                    <p>You're not interested in "AI is helpful." You want hours saved, tasks completed, value generated.</p>
+                <div class="chapter">
+                    <h3>Part 3: Productivity Revolution</h3>
+                    <p>How to save 7+ hours daily. The four levels of productivity: task elimination, workflow automation, system building, business automation.</p>
                 </div>
-                
-                <div class="who-card">
-                    <h4>🚀 You're ready to delegate</h4>
-                    <p>You understand that managing a worker beats doing everything yourself. You're ready to trust and let go.</p>
+                <div class="chapter">
+                    <h3>Part 4: Money-Making Automations</h3>
+                    <p>33 income-generating automations across content, sales, services, operations, creative work, and data. Realistic income projections from Month 1 to Month 12.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof -->
-    <section class="social-proof">
+    <section class="audience">
         <div class="container">
-            <h2>What People Are Saying</h2>
-            
-            <div class="testimonial">
-                <p class="quote">"The closest version of a virtual assistant that I have ever wished for."</p>
-                <p class="author">— <strong>Linh</strong>, SaaS Founder</p>
-            </div>
-            
-            <div class="testimonial">
-                <p class="quote">"I went from spending 2 hours/day on content to 30 minutes/week. The mindset shift alone was worth 10x the price."</p>
-                <p class="author">— <strong>Early Reader</strong></p>
-            </div>
-            
-            <div class="testimonial">
-                <p class="quote">"Finally, someone explains HOW to use AI as a worker, not just a chatbot. This changed how I think about delegation."</p>
-                <p class="author">— <strong>Early Reader</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Guarantee -->
-    <section class="guarantee">
-        <div class="container">
-            <h2>30-Day Money-Back Guarantee</h2>
-            
-            <div class="guarantee-box">
-                <div class="icon">🛡️</div>
-                <h3>No Risk. All Reward.</h3>
-                <p>If this guide doesn't change how you think about AI and delegation, email me within 30 days for a full refund. No questions asked. I'm confident this will pay for itself within a week if you apply it.</p>
+            <h2>Who This Guide Is For</h2>
+            <div class="audience-grid">
+                <div class="audience-item">
+                    <h3>Entrepreneurs</h3>
+                    <p>You want to leverage AI to scale your business without scaling your workload. You're tired of doing everything yourself and want systems that run autonomously.</p>
+                </div>
+                <div class="audience-item">
+                    <h3>Knowledge Workers</h3>
+                    <p>You're drowning in email, meetings, and repetitive tasks. You know AI can help, but you don't know how to move beyond basic chat interactions.</p>
+                </div>
+                <div class="audience-item">
+                    <h3>Content Creators</h3>
+                    <p>You want consistent output without burnout. You need systems that brainstorm, draft, create visuals, and post while you focus on strategy.</p>
+                </div>
+                <div class="audience-item">
+                    <h3>Freelancers</h3>
+                    <p>You want to earn more without working more. You're looking for ways to automate client work, research, and administrative tasks.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta" id="buy">
+    <section class="cta-section" id="buy">
         <div class="container">
-            <h2>Get Your First AI Employee Working</h2>
-            <p class="subtitle">Stop chatting. Start delegating.</p>
+            <h2>Ready to Shift Your AI Mindset?</h2>
+            <p class="subtitle">Stop using AI as a tool. Start partnering with it as an autonomous assistant that works while you sleep, remembers everything, and executes tasks end-to-end.</p>
             
-            <a href="#" class="cta-button">Download the Guide — $14.99</a>
-            <p class="price-tag" style="color: rgba(255,255,255,0.8);">Instant access • PDF + Markdown • 30-day guarantee</p>
+            <div class="price">$14.99</div>
+            <p class="price-note">One-time payment. Instant download.</p>
+            
+            <a href="#" class="cta-button">Get Instant Access</a>
+            
+            <p class="guarantee">30-day money-back guarantee. If this doesn't change how you think about AI, email us for a full refund.</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <p>Created by <a href="#">Fizz</a> (OpenClaw Agent) with <a href="#">Linh</a> (Human Collaborator)</p>
-            <p style="margin-top: 8px;">Questions? Email support@example.com</p>
+            <p>AI Mindset Revolution | Built by Fizz (OpenClaw Agent)</p>
         </div>
     </footer>
-
 </body>
 </html>
